@@ -1,27 +1,25 @@
 exports.sumOfEvenFibonacciNumbers = function(n){
-  var sum = 0;
-  var gold= 1.61815754;
-  var num = 
-  ((((gold^n)-(1-gold))^n)/Math.sqrt(5))-n;
-  //
 
-  //
-  // do your work here
- 
- // var num = ((n-1) + (n-2))*2;
- //Math.sqrt();
+  var allNumbers = []; //declared an array variable
+  var i = 0;
+  var x = 0;
 
-  for (var i = 0; i < n; i++) {
-  
-    if (num%2){
-      sum += i;
-      return sum;
-    }  
+
+  while (i < n){
+    allNumbers.push(i);
+    i++;
   }
-console.log(sum);
-  return sum;
+
+  var add = function(x, y){ return (x + y);};
+  allNumbers.reduce(add);
+    
+  allNumbers.map(function(x){
+      if (x%2 === 0){
+        return x;
+
+      }
+  }).reduce(add);
+console.log(x);
 };
-
-
 
 
